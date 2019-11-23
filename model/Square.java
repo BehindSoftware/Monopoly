@@ -10,42 +10,55 @@ railroad, "Go", Chance, the jail, and so on.
 @author Byron Weber Becker */
 public abstract class Square extends Object
 {
-   private IView[] views = new IView[1];
-   private int numViews = 0;
-   
+	private IView[] views = new IView[1];
+	private int numViews = 0;
 
-   public String getName()
-   {  
-    return null;
-   }
+	private Player[] playerList;	//Bir square has-a birden fazla player (1 to n)
+	private String propertyName;
+	private String propertyDescription; 
+	private int purPrice;
+	//	 testGame2.txt dosyasından başta çekip square nesnelerini create etmek mantıklı   
+	//   String[] descriptionListOfSquares = {"Go\n", "BuildingLot\n", "Chance\n", "TheJail\n", "RailRoad"};
+	//   String[] nameOfSquares = {"Go", "Mediterranean Ave", "Baltic Ave", "Reading RR", "Oriental Ave", "Vermont Ave", "Connecticut Ave", "St. Charles Place", "States Ave",
+	//		   "Virginia Ave", "Pennsylvania RR", "St. James Place", "Tennessee Ave", "New York Ave", "Kentucky Ave", "Indiana Ave", "Illinois Ave", "B&O RR", 
+	//   }
 
-   /** Get a description of this square.
+	
+	//	bu descriptionlar inherit olmalı mesela railroad'a ev kurulmuyor! Hepsinin farklı özellikleri var. getName, getDescription ortak methodlar.
+
+
+	public String getName()
+	{  
+		return this.propertyName;
+	}
+
+	/** Get a description of this square.
    @return a String description of this square */
-   public String getDescription()
-   {  
- return null;
-   }
+	public String getDescription()
+	{  
+		return this.propertyDescription;
+	}
 
-   
 
-   /** Get a list of the players currently occupying this property.
+
+	/** Get a list of the players currently occupying this property.
    @return a full array with the 0 or more players who have most recently
    landed on this property */
-   public Player[] getPlayers()
-   {  
-    return null;
-   }
+	public Player[] getPlayers()
+	{  
+		return this.playerList;
+	}
 
 
-   /** Add another view to be notified whenever this part of the model changes.
+	/** Add another view to be notified whenever this part of the model changes.
    @param view the view to add */
-   public void addView(IView aView)
-   {  
-   }
+	public void addView(IView aView)
+	{  
+	}
 
-   /** Update all the views registered with this part of the model.*/
-   protected synchronized void updateAllViews()
-   {  
-   }
+	/** Update all the views registered with this part of the model.*/
+	protected synchronized void updateAllViews()
+	{  
+	}
 
 }

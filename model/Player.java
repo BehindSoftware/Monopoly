@@ -12,7 +12,7 @@ public abstract class Player extends Object
    private int numViews = 0;
    private static Dice dice;
    
-   private String[] propertyList;
+   private String[] propertyList; //bir player has-a birden fazla property (1 to n)
    private String name;
    private int ID;
    private int balance;
