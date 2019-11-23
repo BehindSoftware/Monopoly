@@ -1,8 +1,8 @@
-package monopoly.gui;
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import becker.util.IView;
-import monopoly.model.*;
+import model.*;
 
 
 /** A view for a Square model.

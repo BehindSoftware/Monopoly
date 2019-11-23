@@ -1,6 +1,6 @@
-package monopoly.gui;
+package gui;
 import javax.swing.*;
-import monopoly.model.Monopoly;
+import model.Monopoly;
 
 
 /** Embed the MonopolyGUI in a JFrame to run as a stand-alone application.

@@ -1,4 +1,4 @@
-package monopoly.model;
+package model;
 import becker.util.IView;
 import becker.io.TextInput;
 

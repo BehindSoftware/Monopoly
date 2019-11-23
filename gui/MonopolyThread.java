@@ -1,7 +1,7 @@
-package monopoly.gui;
+package gui;
 import java.lang.Thread;
 import java.lang.Runnable;
-import monopoly.model.*;
+import model.*;
 
 
 /** A class to make a monopoly model runnable as a thread.

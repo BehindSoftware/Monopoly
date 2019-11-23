@@ -1,8 +1,8 @@
-package monopoly.gui;
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
-import monopoly.model.*;
+import model.*;
 
 
 /** Put together the top-level of the Monopoly GUI.  It is composed of

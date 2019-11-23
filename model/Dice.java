@@ -1,4 +1,4 @@
-package monopoly.model;
+package model;
 
 
 /** An class to be inherited from to create various kinds of dice.

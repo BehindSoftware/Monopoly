@@ -1,10 +1,10 @@
-package monopoly.gui;
+package gui;
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.event.*;
 import java.awt.*;
 import becker.util.IView;
-import monopoly.model.*;
+import model.*;
 
 
 /** A view of a player.

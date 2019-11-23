@@ -1,4 +1,4 @@
-package monopoly.model;
+package model;
 
 
 /** Roll a pair of random dice.
