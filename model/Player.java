@@ -12,7 +12,11 @@ public abstract class Player extends Object
    private int numViews = 0;
    private static Dice dice;
    
-
+   private String[] propertyList;
+   private String name;
+   private int ID;
+   private int balance;
+   private int netWorth;
    
    /* Used to determine if we are debugging or not.   Once this is determined,
     * set the appropriate type of dice. */
@@ -39,35 +43,35 @@ public abstract class Player extends Object
    @return a full array giving the names of the properties owned by this player. */
    public String[] getOwnedPropertyNames()
    {  
-    return null;
+    return this.propertyList;
    }
 
    /** Get the name of this player.
    @return the name of this player */
    public String getName()
    {  
-    return null;
+    return this.name;
    }
 
    /** Get the id of this player.
    @return the id of this player */
    public int getID()
    {  
-    return 0;
+    return this.ID;
    }
 
    /** Get the bank balance of this player.
    @return this player's bank balance */
    public int getBalance()
    {  
-    return 0;
+    return this.balance;
    }
 
    /** Get the net worth of this player.
    @return this player's net worth */
    public int getNetWorth()
    {  
-    return 0;
+    return this.netWorth;
    }
 
    /** Indicate whether or not this player can buy the Square it most
