@@ -11,6 +11,8 @@ public class RandomDice extends Dice
 	{  super();
 	}
 
+	//bad design : roll and getFaceValue will be seperated. (Principle of Separation of Command and Query)
+	
    /** Return a roll of the pair of dice.
    @return a number between 2 and 2*numSides */
    public int getRoll()
