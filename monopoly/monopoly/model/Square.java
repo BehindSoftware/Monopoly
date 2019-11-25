@@ -22,16 +22,38 @@ public abstract class Square extends Object
 	//   String[] nameOfSquares = {"Go", "Mediterranean Ave", "Baltic Ave", "Reading RR", "Oriental Ave", "Vermont Ave", "Connecticut Ave", "St. Charles Place", "States Ave",
 	//		   "Virginia Ave", "Pennsylvania RR", "St. James Place", "Tennessee Ave", "New York Ave", "Kentucky Ave", "Indiana Ave", "Illinois Ave", "B&O RR", 
 	//   }
-
 	
 	//	bu descriptionlar inherit olmalı mesela railroad'a ev kurulmuyor! Hepsinin farklı özellikleri var. getName, getDescription ortak methodlar.
+	
+	private String name;
+	private Square nextSquare;
+	private int index;
 
+	public Square(String name,int index) {
+		this.name = name;
+		this.index = index;
+	}
+
+	public void setNextSquare(Square s) {
+		nextSquare = s;
+	}
+
+	public Square getNextSquare(Square s) {
+		return nextSquare;
+	}
 
    public String getName()
    {  
-		return this.propertyName;
+		return name;
    }
 
+   public int getIndex()
+   {  
+		return index;
+   }
+   
+   
+   ////////////////////////////////////////
    /** Get a description of this square.
    @return a String description of this square */
    public String getDescription()
