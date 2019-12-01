@@ -11,7 +11,11 @@ import monopoly.model.*;
 @author Byron Weber Becker */
 /* package */ class PlayerView extends JPanel implements IView
 {
-   private JLabel balance = new JLabel("$0");
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JLabel balance = new JLabel("$0");
    private JLabel netWorth = new JLabel("$0");
    private JButton buyProperty = new JButton("Buy Property");
    private JButton finished = new JButton("Finished");
@@ -75,7 +79,7 @@ import monopoly.model.*;
       gc.weightx = 0.25;
       gc.weighty = 0.0;
       //this.add(new Token(this.model.getID()), gc);
-      gc.fill = gc.BOTH;
+      gc.fill = GridBagConstraints.BOTH;
       this.add(this.balance, gc);
       gc.gridx++;
       this.add(this.netWorth, gc);

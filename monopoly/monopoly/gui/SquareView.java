@@ -9,7 +9,11 @@ import monopoly.model.*;
 @author Byron Weber Becker */
 /* package */ class SquareView extends JPanel implements IView
 {
-   private Square model;
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private Square model;
    private JTextArea tArea = new JTextArea();
    private static final Font defFont = new Font("SansSerif", Font.PLAIN, 9);
    private static final int TOKEN_DIA = 20;
@@ -28,7 +32,7 @@ import monopoly.model.*;
    private void layoutView()
    {  this.setLayout(new GridLayout());
       this.add(tArea);
-      this.tArea.setFont(this.defFont);
+      this.tArea.setFont(SquareView.defFont);
       this.tArea.setOpaque(false);
       this.tArea.setEditable(false);
    }

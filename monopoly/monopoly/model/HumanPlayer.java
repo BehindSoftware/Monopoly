@@ -9,7 +9,15 @@ allowing other players to make their move.
 @author Byron Weber Becker */
 public class HumanPlayer extends Player
 {
-   private boolean takingTurn = false;
+   public HumanPlayer(String name, RandomDice[] dice, Board b) {
+		super(name, dice, b);
+		   this.name = name;
+		   this.randomDice = dice;
+		   this.board = b;
+		   marker = new Piece(board.getStartSquare( ) );
+	}
+
+private boolean takingTurn = false;
 
    
 

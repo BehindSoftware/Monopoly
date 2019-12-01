@@ -5,14 +5,22 @@ package monopoly.model;
 @author Byron Weber Becker */
 public class Dice extends Object
 {
-   public Dice()
-   {  super();
-   }
+	protected int faceValue;
 
-   /** Get a roll of the "dice"
+	public Dice()
+	{  super();
+	}
+
+	/** Get a roll of the "dice"
    @return a random number */
-   public int getRoll()
-   {  return 0;
-   }
-   
+	public void roll()
+	{  return ;
+	}
+	
+	/** Get a roll of the "dice"
+	   @return a random number */
+	public int getFaceValue( ) { 
+		return faceValue; 
+	} 
+
 }

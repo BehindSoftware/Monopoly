@@ -1,5 +1,5 @@
 package monopoly.gui;
-import java.lang.Thread;
+//import java.lang.Thread;
 import java.lang.Runnable;
 import monopoly.model.*;
 

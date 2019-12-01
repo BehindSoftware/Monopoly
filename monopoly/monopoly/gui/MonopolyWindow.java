@@ -7,7 +7,12 @@ import monopoly.model.Monopoly;
 @author Byron Weber Becker */
 public class MonopolyWindow extends JFrame
 {
-   public MonopolyWindow(Monopoly model)
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public MonopolyWindow(Monopoly model)
    {  super("Monopoly");
       JPanel contents = new MonopolyGUI(model);
       this.setContentPane(contents);
@@ -17,5 +22,8 @@ public class MonopolyWindow extends JFrame
 
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
+public void printInitialText() {
+	System.out.println("Initial Window");
+}
    
 }

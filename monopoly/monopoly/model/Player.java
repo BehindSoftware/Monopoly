@@ -1,43 +1,59 @@
 package monopoly.model;
 import becker.util.IView;
-import becker.io.TextInput;
+//import becker.io.TextInput;
 
 
 
 /** A class representing one monopoly player.
 @author Byron Weber Becker */
+
+//player abstract olup humana taşınacakfonksiyonlar
 public abstract class Player extends Object
 {
-   private IView[] views = new IView[1];
-   private int numViews = 0;
-   private static Dice dice;
+   //private IView[] views = new IView[1];
+   //private int numViews = 0;
+   //private static Dice dice;
    
    private String[] propertyList; //bir player has-a birden fazla property (1 to n)
-   private String name;
+
    private int ID;
    private int balance;
    private int netWorth;
    
-   /* Used to determine if we are debugging or not.   Once this is determined,
-    * set the appropriate type of dice. */
-   private void determineDiceType()
-   {
-      /* Only needs to be called if we have not initialized dice. */
-      if(Player.dice == null)
-      {  TextInput in = new TextInput();
+   protected String name;
+   protected RandomDice [ ] randomDice;
+   protected Board board; 
+   protected Piece marker;
+   
+   public Player(String name, RandomDice [ ] dice, Board b) {
 
-         System.out.print("Do you want to debug? ");
-         /* Get input from the user to determine whether debugging or not. */
-         if (in.readLine().trim().equalsIgnoreCase("y"))
-         {  
-         }
-         else
-         {  
-         }
-         in.close();
-      }
+	   this.name = name;
+	   this.randomDice = dice;
+	   this.board = b;
+	   marker = new Piece(board.getStartSquare( ) );
 
    }
+   
+   /* Used to determine if we are debugging or not.   Once this is determined,
+    * set the appropriate type of dice. */
+//   private void determineDiceType()
+//   {
+//      /* Only needs to be called if we have not initialized dice. */
+//      if(Player.dice == null)
+//      {  TextInput in = new TextInput();
+//
+//         System.out.print("Do you want to debug? ");
+//         /* Get input from the user to determine whether debugging or not. */
+//         if (in.readLine().trim().equalsIgnoreCase("y"))
+//         {  
+//         }
+//         else
+//         {  
+//         }
+//         in.close();
+//      }
+//
+//   }
 
    /** Get a list naming the properties this player has bought.
    @return a full array giving the names of the properties owned by this player. */
@@ -99,6 +115,17 @@ public abstract class Player extends Object
    /** Roll the dice and advance the token. */
    protected void advanceToken()
    {  
+	   //roll dice
+	   int rollTotal = 0;
+	   for (int i = 0; i < randomDice.length; i++) {
+		   randomDice[i].roll( );
+		   rollTotal = randomDice[i].getFaceValue( );
+	   }
+
+	   Square newLoc = board.getSquare(marker.getLocation( ), rollTotal);
+
+	   marker.setLocation(newLoc);
+
    }
 
    /** Advance the token the given number of properties.

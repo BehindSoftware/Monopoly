@@ -10,6 +10,7 @@ public class Main extends Object
    public static void main(String[] args)
    {  Monopoly model = new Monopoly();
       MonopolyWindow mw = new MonopolyWindow(model);
+      mw.printInitialText();
    }
    
 }

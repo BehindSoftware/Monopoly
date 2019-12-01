@@ -1,5 +1,4 @@
 package monopoly.model;
-import java.util.*;
 import becker.util.IView;
 
 
@@ -10,28 +9,19 @@ railroad, "Go", Chance, the jail, and so on.
 @author Byron Weber Becker */
 public abstract class Square extends Object
 {
-   private IView[] views = new IView[1];
-   private int numViews = 0;
+//   private IView[] views = new IView[1];
+//   private int numViews = 0;
    
 	private Player[] playerList;	//Bir square has-a birden fazla player (1 to n)
-	private String propertyName;
-	private String propertyDescription; 
-	private int purPrice;
-	//	 testGame2.txt dosyasından başta çekip square nesnelerini create etmek mantıklı   
-	//   String[] descriptionListOfSquares = {"Go\n", "BuildingLot\n", "Chance\n", "TheJail\n", "RailRoad"};
-	//   String[] nameOfSquares = {"Go", "Mediterranean Ave", "Baltic Ave", "Reading RR", "Oriental Ave", "Vermont Ave", "Connecticut Ave", "St. Charles Place", "States Ave",
-	//		   "Virginia Ave", "Pennsylvania RR", "St. James Place", "Tennessee Ave", "New York Ave", "Kentucky Ave", "Indiana Ave", "Illinois Ave", "B&O RR", 
-	//   }
-	
-	//	bu descriptionlar inherit olmalı mesela railroad'a ev kurulmuyor! Hepsinin farklı özellikleri var. getName, getDescription ortak methodlar.
-	
-	private String name;
-	private Square nextSquare;
-	private int index;
 
-	public Square(String name,int index) {
-		this.name = name;
-		this.index = index;
+	protected String name;
+	protected String propertyDescription; 
+	private Square nextSquare;
+	protected int index;
+
+	public Square(String propertyDescription,int index) {
+		//this.name = name;
+		//this.index = index;
 	}
 
 	public void setNextSquare(Square s) {

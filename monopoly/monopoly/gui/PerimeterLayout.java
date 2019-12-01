@@ -67,7 +67,7 @@ public class PerimeterLayout extends Object implements LayoutManager2
       {
 	      Dimension dim = new Dimension(0, 0);
       	int nmembers = target.getComponentCount();
-         boolean firstVisibleComponent = true;
+         //boolean firstVisibleComponent = true;
 
 	      for (int i = 0 ; i < nmembers ; i++)
          {  Component m = target.getComponent(i);
@@ -96,7 +96,7 @@ public class PerimeterLayout extends Object implements LayoutManager2
       {
 	      Dimension dim = new Dimension(0, 0);
       	int nmembers = target.getComponentCount();
-         boolean firstVisibleComponent = true;
+         //boolean firstVisibleComponent = true;
 
 	      for (int i = 0 ; i < nmembers ; i++)
          {  Component m = target.getComponent(i);
@@ -171,7 +171,7 @@ public class PerimeterLayout extends Object implements LayoutManager2
    }
 
    public void addLayoutComponent(Component comp, Object constraints)
-   {  if (constraints == this.CENTER)
+   {  if (constraints == PerimeterLayout.CENTER)
       {  this.centerComp = comp;
       }
    }

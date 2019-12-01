@@ -1,0 +1,150 @@
+Go
+Go
+
+BuildingLot
+Mediterranean Ave
+60
+0
+30
+
+BuildingLot
+Baltic Ave
+60
+0
+30
+
+RailRoad
+Reading RR
+200
+
+BuildingLot
+Oriental Ave
+100
+0
+50
+
+BuildingLot
+Vermont Ave
+100
+0
+50
+
+BuildingLot
+Connecticut Ave
+120
+2
+60
+
+BuildingLot
+St. Charles Place
+140
+0
+70
+
+BuildingLot
+States Ave
+140
+0
+70
+
+BuildingLot
+Virginia Ave
+160
+0
+80
+
+RailRoad
+Pennsylvania RR
+200
+
+BuildingLot
+St. James Place
+180
+2
+90
+
+BuildingLot
+Tennessee Ave
+180
+0
+90
+
+BuildingLot
+New York Ave
+200
+0
+100
+
+BuildingLot
+Kentucky Ave
+220
+0
+110
+
+BuildingLot
+Indiana Ave
+220
+0
+110
+
+BuildingLot
+Illinois Ave
+240
+0
+120
+
+RailRoad
+B&O RR
+200
+
+BuildingLot
+Atlantic Ave
+260
+0
+130
+
+BuildingLot
+Ventnor Ave
+260
+1
+130
+
+BuildingLot
+Marvin Gardens
+280
+0
+140
+
+BuildingLot
+Pacific Ave
+300
+0
+150
+
+BuildingLot
+North Carolina Ave
+300
+0
+150
+
+BuildingLot
+Pennsylvania Ave
+320
+0
+160
+
+RailRoad
+Short Line
+200
+
+BuildingLot
+Park Place
+350
+0
+175
+
+BuildingLot
+Boardwalk
+400
+0
+200

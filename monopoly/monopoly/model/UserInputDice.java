@@ -15,7 +15,7 @@ public class UserInputDice extends Dice
    /** Ask the user for the number to use. If the user hits "Cancel",
    the program ends (after a confirmation dialog).
    @return the "roll" of the dice obtained from the user */
-   public int getRoll()
+   public void roll()
    {
       while (true)
       {  try
@@ -28,8 +28,8 @@ public class UserInputDice extends Dice
                {  System.exit(0);
                }
             } else
-            {  int i = Integer.parseInt(inputValue);
-               return i;
+            {   faceValue = Integer.parseInt(inputValue);
+               return ;
             }
          } catch (NumberFormatException e)
          {  // ignored

@@ -4,13 +4,16 @@ import java.awt.*;
 import java.io.*;
 import monopoly.model.*;
 
-
 /** Put together the top-level of the Monopoly GUI.  It is composed of
 a view for each property and a view for each player.
 @author Byron Weber Becker */
 public class MonopolyGUI extends JPanel 
 {
-   /** A list of colours to use for the players. */
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/** A list of colours to use for the players. */
    /* package */ static final Color[] PLAYER_COLORS = new Color[]{
             Color.blue, Color.red, Color.green, Color.yellow,
             Color.darkGray, Color.orange, Color.cyan
@@ -20,8 +23,17 @@ public class MonopolyGUI extends JPanel
    public MonopolyGUI(Monopoly model)
    {  super();
 
-      //model.loadGame(this.getOptionalInputFile());
-
+   		//Burada controller'a gidip butona basılmayı beklemesi gerekiyor, eğer playGame basılırsa 
+   //yeni oyun load game basılırsa dosyadan yükleme yapılmalı.
+   boolean stub=true;
+   
+   if(stub) {
+	   model.playGame();
+   }
+   else{
+	   model.loadGame(this.getOptionalInputFile());
+   }
+  
       this.layoutView(model);
 
       /* The HumanPlayer class waits for the human to manipulate the
@@ -54,7 +66,7 @@ public class MonopolyGUI extends JPanel
             } catch (IOException e)
             {  
             }
-            //return fc.getSelectedFile().getName();
+            return fc.getSelectedFile().getName();
          } else
          {  return null;
          }
