@@ -110,4 +110,18 @@ public class Board {
 		System.out.println("Everything is okey ?");
 	}
 	
+	public int getSquareForIndex(int index) {
+		for(int i=0;i<SIZE;i++) {
+			PropertySquare temp = new PropertySquare("",i);
+			temp = (PropertySquare) squares.get(i);
+			if(temp.index == index && temp.propertyDescription == "BuildingLot" ) {
+				return temp.purPrice;
+			}else if(temp.index == index && temp.propertyDescription == "RailRoad") {
+				RegularSquare s = new RegularSquare("", i);
+				return s.purPrice;
+			}
+		}
+		return 0;
+	}
+	
 }

@@ -95,7 +95,10 @@ public abstract class Player extends Object
    @return true if the player can buy the Square; false otherwise */
    public boolean canBuyOccupiedSquare()
    {  
-    return false;
+	   if((this.balance - board.getSquareForIndex(this.getBoardPosition())) > 0) {	//balance 0 olunca kaybetmiyorsa 0'da eklenecek
+		   return true;
+	   }
+	   return false;
    }
 
    
@@ -132,6 +135,9 @@ public abstract class Player extends Object
    @param howFar how many properties to advance  */
    protected void advanceToken(int howFar)
    {  
+	   Square newLoc = board.getSquare(marker.getLocation( ), howFar);
+
+	   marker.setLocation(newLoc);
    }
 
    /** Make a move for this player -- find out how far to advance
@@ -144,10 +150,10 @@ public abstract class Player extends Object
    @return 0 for "Go, 1 for "Mediterrainean Ave", etc. */
    public int getBoardPosition()
    {  
- return 0;
+	   return this.marker.getLocation( ).getIndex();
    }
 
-   
+
 
     /** Add another view to be notified whenever this part of the model changes.
    @param view the view to add */
