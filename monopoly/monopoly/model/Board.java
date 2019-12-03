@@ -10,7 +10,7 @@ import java.util.*;
 
 public class Board {
 
-	private static final int SIZE = 40;
+	private static final int SIZE = 27;
 	private ArrayList<Object> squares = new ArrayList<Object>(SIZE);
 	
 	public Board () {
@@ -54,6 +54,7 @@ public class Board {
 
 					   GoSquare s = new GoSquare("Go", index++);
 					   s.name = bReader.readLine();
+					   squares.add(s);
 					   
 				   }else if(text.equals("BuildingLot")) {
 					   System.out.println(index);
@@ -63,6 +64,7 @@ public class Board {
 					   s.purPrice = Integer.parseInt(bReader.readLine());
 					   s.houses = Integer.parseInt(bReader.readLine());
 					   s.houseCost = Integer.parseInt(bReader.readLine());
+					   squares.add(s);
 					   
 				   }else if(text.equals("RailRoad")) {
 					   System.out.println(index);
@@ -70,6 +72,7 @@ public class Board {
 					   RegularSquare s = new RegularSquare("RailRoad", index++);
 					   s.name = bReader.readLine();
 					   s.purPrice = Integer.parseInt(bReader.readLine());
+					   squares.add(s);
 				   }else {
 					   //System.out.println("Unknown Square");
 				   }
@@ -104,7 +107,7 @@ public class Board {
 		Square current = (Square) squares.get(i);
 		Square next = (Square) squares.get((i+1)%SIZE);
 		current.setNextSquare(next);
-		
+		System.out.println("Everything is okey ?");
 	}
 	
 }
