@@ -148,3 +148,15 @@ Boardwalk
 400
 0
 200
+
+BuildingLot
+BeverlyHills
+400
+0
+200
+
+BuildingLot
+Crawshaw
+350
+0
+175

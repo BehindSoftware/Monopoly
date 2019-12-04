@@ -95,7 +95,7 @@ public abstract class Player extends Object
    @return true if the player can buy the Square; false otherwise */
    public boolean canBuyOccupiedSquare()
    {  
-	   if((this.balance - board.getSquareForIndex(this.getBoardPosition())) > 0) {	//balance 0 olunca kaybetmiyorsa 0'da eklenecek
+	   if((this.balance - board.getPurPriceForIndex(this.getBoardPosition())) > 0) {	//balance 0 olunca kaybetmiyorsa 0'da eklenecek
 		   return true;
 	   }
 	   return false;

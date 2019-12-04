@@ -75,18 +75,27 @@ public class MonopolyGUI extends JPanel
 
    /** Make a panel with all the property views in it. */
    private JPanel makePropertiesPanel(Monopoly model)
-   {  JPanel p = new JPanel();
-      int numProperties = model.getNumSquares();
-      int propPerSide = (numProperties + 3) / 4 + 1;
-      p.setLayout(new PerimeterLayout(propPerSide, propPerSide,
-                         propPerSide - 1, propPerSide - 1));
+   {  
+	   JPanel p = new JPanel();
 
-      for(int i=0; i<numProperties; i++)
-      {  SquareView pv = new SquareView(model.getSquare(i));
-         p.add(pv);
-      }
-      p.add(new JButton("CENTER"), PerimeterLayout.CENTER);
-      return p;
+	   int numProperties = model.getNumSquares();
+
+	   int propPerSide = (numProperties + 3) / 4 + 1;
+
+	   p.setLayout(new PerimeterLayout(propPerSide, propPerSide,
+			   propPerSide - 1, propPerSide - 1));
+
+	   System.out.println("Geldi"+propPerSide+"model.getSquare(0):"+model.getSquare(0));
+	   
+	   for(int i=0; i<numProperties; i++)
+	   {  
+		   SquareView pv = new SquareView(model.getSquare(i));
+		   p.add(pv);
+		   System.out.println("Square index:"+i);
+	   }
+
+	   p.add(new JButton("CENTER"), PerimeterLayout.CENTER);
+	   return p;
    }
 
    /** Make a panel with all the player views in it. */

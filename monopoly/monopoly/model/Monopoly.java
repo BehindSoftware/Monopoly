@@ -99,7 +99,7 @@ public class Monopoly extends Object
    @return the number of squares in the game. */
    public int getNumSquares()
    {  
-    return 40;
+	   return Board.SIZE;
    }
 
    /** Make available the number of players in the game.
@@ -113,9 +113,15 @@ public class Monopoly extends Object
    @param boardPosition the position of the Square to get
       ("Go" = position 0, "Mediterranean Ave" = position 1, etc.)
    @return the Square at the given position */
-   public Square getSquare(int boardPosition)
+   public PropertySquare getSquare(int boardPosition)
    {  
-    return null;
+	   PropertySquare ps = new PropertySquare("", 0);
+	   ps = board.getPropertySquareForIndex(boardPosition);
+	   
+	   if(ps!= null ) {
+		   return  ps;
+	   }
+	return null;
    }
 
    /** Get a Square.
@@ -132,7 +138,7 @@ public class Monopoly extends Object
    @return the player with the given id */
    public Player getPlayer(int id)
    {  
-    return null;
+	   return players.get(id);
    }
 
    

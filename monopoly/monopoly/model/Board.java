@@ -10,7 +10,7 @@ import java.util.*;
 
 public class Board {
 
-	private static final int SIZE = 27;
+	public static final int SIZE = 29;
 	private ArrayList<Object> squares = new ArrayList<Object>(SIZE);
 	
 	public Board () {
@@ -110,7 +110,7 @@ public class Board {
 		System.out.println("Everything is okey ?");
 	}
 	
-	public int getSquareForIndex(int index) {
+	public int getPurPriceForIndex(int index) {
 		for(int i=0;i<SIZE;i++) {
 			PropertySquare temp = new PropertySquare("",i);
 			temp = (PropertySquare) squares.get(i);
@@ -123,5 +123,30 @@ public class Board {
 		}
 		return 0;
 	}
-	
+
+	public PropertySquare getPropertySquareForIndex(int index) {
+		PropertySquare temp = new PropertySquare("",0);
+		for(int i=0;i<SIZE;i++) {
+
+			temp = (PropertySquare) squares.get(i);
+			if(temp.index == index ) {
+				return temp;
+			}
+		}
+		return null;
+	}
+
+	public RegularSquare getRailRoadSquareForIndex(int index) {
+		
+		RegularSquare temp = new RegularSquare("",0);
+		for(int i=0;i<SIZE;i++) {
+
+			temp = (RegularSquare) squares.get(i);
+			if(temp.index == index ) {
+				return temp;
+			}
+		}
+		return null;
+	}
+
 }
