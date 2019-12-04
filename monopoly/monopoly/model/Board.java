@@ -52,14 +52,14 @@ public class Board {
 				   if(text.equals("Go")) {
 					   System.out.println(index);
 
-					   GoSquare s = new GoSquare("Go", index++);
+					   Square s = new Square("Go", index++);
 					   s.name = bReader.readLine();
 					   squares.add(s);
 					   
 				   }else if(text.equals("BuildingLot")) {
 					   System.out.println(index);
 
-					   PropertySquare s = new PropertySquare("BuildingLot", index++);
+					   Square s = new Square("BuildingLot", index++);
 					   s.name = bReader.readLine();
 					   s.purPrice = Integer.parseInt(bReader.readLine());
 					   s.houses = Integer.parseInt(bReader.readLine());
@@ -69,7 +69,7 @@ public class Board {
 				   }else if(text.equals("RailRoad")) {
 					   System.out.println(index);
 
-					   RegularSquare s = new RegularSquare("RailRoad", index++);
+					   Square s = new Square("RailRoad", index++);
 					   s.name = bReader.readLine();
 					   s.purPrice = Integer.parseInt(bReader.readLine());
 					   squares.add(s);
@@ -112,41 +112,25 @@ public class Board {
 	
 	public int getPurPriceForIndex(int index) {
 		for(int i=0;i<SIZE;i++) {
-			PropertySquare temp = new PropertySquare("",i);
-			temp = (PropertySquare) squares.get(i);
-			if(temp.index == index && temp.propertyDescription == "BuildingLot" ) {
+			//Square temp = new Square("",i);
+			Square temp = (Square) squares.get(i);
+			if(temp.index == index ) 
 				return temp.purPrice;
-			}else if(temp.index == index && temp.propertyDescription == "RailRoad") {
-				RegularSquare s = new RegularSquare("", i);
-				return s.purPrice;
-			}
 		}
 		return 0;
 	}
 
-	public PropertySquare getPropertySquareForIndex(int index) {
-		PropertySquare temp = new PropertySquare("",0);
+	public Square getSquareForIndex(int index) {
+		Square temp = new Square("",0);
 		for(int i=0;i<SIZE;i++) {
 
-			temp = (PropertySquare) squares.get(i);
+			temp = (Square) squares.get(i);
 			if(temp.index == index ) {
 				return temp;
 			}
 		}
 		return null;
 	}
-
-	public RegularSquare getRailRoadSquareForIndex(int index) {
-		
-		RegularSquare temp = new RegularSquare("",0);
-		for(int i=0;i<SIZE;i++) {
-
-			temp = (RegularSquare) squares.get(i);
-			if(temp.index == index ) {
-				return temp;
-			}
-		}
-		return null;
-	}
+	
 
 }

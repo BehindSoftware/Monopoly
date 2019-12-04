@@ -89,7 +89,7 @@ public class MonopolyGUI extends JPanel
 	   
 	   for(int i=0; i<numProperties; i++)
 	   {  
-		   SquareView pv = new SquareView(model.getSquare(i));
+		   SquareView pv = new SquareView((Square) model.getSquare(i));
 		   p.add(pv);
 		   System.out.println("Square index:"+i);
 	   }

@@ -113,10 +113,10 @@ public class Monopoly extends Object
    @param boardPosition the position of the Square to get
       ("Go" = position 0, "Mediterranean Ave" = position 1, etc.)
    @return the Square at the given position */
-   public PropertySquare getSquare(int boardPosition)
+   public Square getSquare(int boardPosition)
    {  
-	   PropertySquare ps = new PropertySquare("", 0);
-	   ps = board.getPropertySquareForIndex(boardPosition);
+	   Square ps = new Square("", 0);
+	   ps = board.getSquareForIndex(boardPosition);
 	   
 	   if(ps!= null ) {
 		   return  ps;

@@ -7,10 +7,13 @@ import becker.util.IView;
 building lot such as "Vermont Ave" or "Park Place". It can also be a
 railroad, "Go", Chance, the jail, and so on.
 @author Byron Weber Becker */
-public abstract class Square extends Object
+public class Square extends Object
 {
-//   private IView[] views = new IView[1];
-//   private int numViews = 0;
+   private IView[] views = new IView[1];
+   private int numViews = 0;
+	protected int purPrice;
+	protected int houses;
+	protected int houseCost;
    
 	private Player[] playerList;	//Bir square has-a birden fazla player (1 to n)
 
@@ -20,8 +23,8 @@ public abstract class Square extends Object
 	protected int index;
 
 	public Square(String propertyDescription,int index) {
-		//this.name = name;
-		//this.index = index;
+		this.propertyDescription = propertyDescription;
+		this.index = index;
 	}
 
 	public void setNextSquare(Square s) {
